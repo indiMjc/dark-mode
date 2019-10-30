@@ -6,8 +6,8 @@ export const useDarkMode = (key, initialValue) => {
   const [colorScheme, setColorScheme] = useLocalStorage(key, initialValue);
 
   useEffect(() => {
-    const body = document.querySelector(body);
-    window.localStorage.getItem(initialValue)
+    const body = document.querySelector("body");
+    colorScheme
       ? body.classList.add("dark-mode")
       : body.classList.remove("dark-mode");
   }, [colorScheme]);
